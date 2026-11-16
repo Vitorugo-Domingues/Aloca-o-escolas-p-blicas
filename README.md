@@ -69,13 +69,6 @@ Identifica a etapa de cada aluno a partir da coluna `escolaridade`, calcula as c
 
 ---
 
-## Pré-requisitos
-
-- Python 3.9+
-- Servidor **OSRM** rodando localmente em `http://127.0.0.1:5000`, com dados do OpenStreetMap que cubram a região (perfil de carro)
-- Acesso à internet (geocodificação via ArcGIS)
-- Base `escolas_filtradas.csv` gerada por `limpeza_escolas.py`
-
 ### Dependências Python
 
 ```bash
@@ -113,7 +106,7 @@ docker run -t -i -p 5000:5000 -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backen
 
 ---
 
-## Configuração
+## Configuração  pastas
 
 Os caminhos das pastas estão fixos no código. Antes de executar, ajuste-os para o seu computador:
 
