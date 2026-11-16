@@ -1,0 +1,16 @@
+cd C:(coloca o local da pasta aqui)
+docker run -t -v "${PWD}:/data" osrm/osrm-backend osrm-extract -p /opt/car.lua /data/sp-metro.osm.pbf
+docker run -t -v "${PWD}:/data" osrm/osrm-backend osrm-partition /data/sp-metro.osrm
+docker run -t -v "${PWD}:/data" osrm/osrm-backend osrm-customize /data/sp-metro.osrm
+
+
+
+
+
+servidor
+
+docker run -d --name osrm-sp -p 5000:5000 --restart unless-stopped -v "${PWD}:/data" `
+  osrm/osrm-backend osrm-routed `
+  --algorithm mld `
+  --max-table-size 10000 `
+  /data/sp-metro.osrm
