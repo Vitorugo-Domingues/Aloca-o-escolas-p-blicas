@@ -1,6 +1,6 @@
 # Sistema de Alocação Escolar
 
-Aplicação web que aloca alunos às escolas da rede municipal de ensino usando **programação linear inteira**, minimizando a distância total percorrida (por vias reais) e respeitando as vagas disponíveis por etapa de ensino em cada escola.
+Aplicação web que aloca alunos às escolas da rede municipal de ensino de Cajamar e Santana de Parnaiba usando **programação linear inteira**, minimizando a distância total percorrida (por vias reais) e respeitando as vagas disponíveis por etapa de ensino em cada escola.
 
 Municípios atendidos atualmente: **Cajamar** e **Santana de Parnaíba** (SP).
 
@@ -198,5 +198,3 @@ O arquivo `resultado_alocacao.csv` é gerado com separador `;` e codificação `
 - Alunos sem coordenadas válidas interrompem o processamento.
 - A alocação falha se não houver vagas suficientes para alguma etapa; nesse caso, o app retorna erro de otimização.
 - As vagas são estimadas a partir do número de turmas do Censo Escolar, com capacidade fixa por turma.
-- A base de escolas contém apenas os municípios de Cajamar e Santana de Parnaíba.# Aloca-o-escolas-p-blicas
-Distribuição de alunos em escolas utilizando SciPy e OSRM
